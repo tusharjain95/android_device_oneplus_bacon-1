@@ -18,7 +18,9 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
+    <!-- Disable H/W keys-->
+    <bool name="config_hwKeysPref">true</bool>
+    
     <!-- Button illumination -->
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 
