@@ -69,9 +69,6 @@ PRODUCT_PACKAGES += \
     camera.bacon \
     Snap
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.codecremote=false
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -87,6 +84,10 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Doze
+PRODUCT_PACKAGES += \
+    OneplusDoze
 
 # Gello
 PRODUCT_PACKAGES += \
