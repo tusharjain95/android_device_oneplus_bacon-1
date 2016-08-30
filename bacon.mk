@@ -221,6 +221,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/bacon
 
+# STK
+PRODUCT_PACKAGES += \
+    Stk
+
 # Thermal config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine-8974.conf
@@ -251,6 +255,3 @@ $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
 endif
-
-# Inherit from oppo-common
-#$(call inherit-product, device/oppo/common/common.mk)
