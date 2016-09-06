@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# inherit from Oppo common
+-include device/oppo/common/BoardConfigCommon.mk
+
 PLATFORM_PATH := device/oneplus/bacon
 
 # Include path
@@ -31,6 +34,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Build with Clang by default
 USE_CLANG_PLATFORM_BUILD := true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=23
+
 WITHOUT_CHECK_API := true
 
 # Architecture
@@ -42,9 +48,6 @@ TARGET_CPU_VARIANT := krait
 
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
-
-# Enable workaround for slow rom flash
-BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -153,6 +156,9 @@ BOARD_NFC_CHIPSET := pn547
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Radio
+TARGET_RIL_VARIANT := caf
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
 
@@ -180,14 +186,6 @@ TARGET_WCNSS_MAC_PREFIX          := e8bba8
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
-
-# CM Hardware
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw
-
-# QCOM Power
-TARGET_POWERHAL_VARIANT := qcom
 
 # Inherit from QC proprietary
 ifneq ($(QCPATH),)
