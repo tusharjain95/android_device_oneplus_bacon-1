@@ -101,7 +101,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Encryption
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # Flags for modem (we still have an old modem)
 #COMMON_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
@@ -203,3 +203,4 @@ TARGET_LDPRELOAD := libNimsWrap.so
 endif
 
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
+
