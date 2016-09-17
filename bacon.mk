@@ -244,7 +244,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant
 
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
     hostapd_default.conf \
     hostapd.accept \
     hostapd.deny \
