@@ -170,10 +170,10 @@ WITH_LZMA_OTA := true
 TARGET_NO_RPC := true
 
 # SELinux
-#include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 
-#BOARD_SEPOLICY_DIRS += \
-#    $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += \
+    $(PLATFORM_PATH)/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
