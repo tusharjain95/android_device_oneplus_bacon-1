@@ -3,7 +3,7 @@
 #
 
 # Bluetooth
-bluetooth.hfp.client=1
+#bluetooth.hfp.client=1
 qcom.bluetooth.soc=smd
 
 # CABL
