@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
     camera.bacon \
     Snap
 
-PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false
 
 # Charger
