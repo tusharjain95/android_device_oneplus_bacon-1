@@ -16,6 +16,7 @@
 
 # inherit from Oppo common
 -include device/oppo/common/BoardConfigCommon.mk
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 PLATFORM_PATH := device/oneplus/bacon
 
